@@ -6,7 +6,12 @@
  * Time: 17:59
  */
 namespace Base\Service;
-
+/**
+ * interface for Queue
+ *
+ * Interface QueueServiceInterface
+ * @package Base\Service
+ */
 interface QueueServiceInterface
 {
     public function send($key, $message);

@@ -12,7 +12,7 @@ $container->userController = function($c) {
 };
 
 //$controller  = new \Base\Controller\UserController($container->userService);
-$container->userController->actionRun();
+
 
 
 

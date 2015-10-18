@@ -7,6 +7,12 @@
  */
 namespace Base\App;
 
+
+/**
+ * Dependence of injection Container
+ * Class Container
+ * @package Base\App
+ */
 class Container
 {
     protected $container = [];
