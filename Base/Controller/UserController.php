@@ -8,20 +8,30 @@ namespace Base\Controller;
  */
 
 use \Base\Service\UserServiceInterface;
+use \Base\Service\QueueServiceInterface;
 
 class UserController  extends \Base\App\Controller
 {
 
+    /**
+     * @var UserServiceInterface|null
+     */
     public $userService = null;
 
-    public function __construct(UserServiceInterface $userService)
+    /**
+     * @var QueueServiceInterface|null
+     */
+    public $queueService = null;
+
+    public function __construct(UserServiceInterface $userService, QueueServiceInterface $queueService)
     {
         $this->userService = $userService;
-
+        $this->queueService = $queueService;
     }
 
     public function actionRun()
     {
         $this->userService->validate(2);
+        $this->queueService->send('key', 'value');
     }
 }

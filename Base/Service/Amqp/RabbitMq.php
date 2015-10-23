@@ -3,6 +3,7 @@ namespace Base\Service\Amqp;
 
 use PhpAmqpLib\Connection\AMQPStreamConnection;
 use PhpAmqpLib\Message\AMQPMessage;
+use Base\App\Configuration\ParametersInterface;
 
 /**
  * Class connection to  RabbitMq
@@ -12,9 +13,11 @@ class RabbitMq implements \Base\Service\QueueProviderInterface
 {
     public $channel = null;
 
-    public function __construct($config)
+    public function __construct(ParametersInterface $config)
     {
-        $connection = new AMQPStreamConnection('localhost', 5672, 'guest', 'guest');
+        $connection = new AMQPStreamConnection(
+            $config->get('host'), $config->get('post'), $config->get('login'), $config->get('password')
+        );
         $this->channel = $connection->channel();
 
     }

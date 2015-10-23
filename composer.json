@@ -1,6 +1,7 @@
 {
     "require": {
-        "codeception/codeception": "*",
-        "videlalvaro/php-amqplib": "2.5.*"
+        "codeception/codeception" :"2.1.x-dev",
+        "videlalvaro/php-amqplib": "2.5.*",
+        "phpunit/phpunit": "4.8.*"
     }
 }

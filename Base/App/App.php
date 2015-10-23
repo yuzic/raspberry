@@ -18,12 +18,18 @@ class App
      *
      * @param $class_name
      */
-    public static function __autoload($class_name) {
+    public static function __autoload($class_name)
+    {
+
         $parts = explode('\\', $class_name);
 
-        require implode('/' ,$parts) . '.php';
-    }
+        require_once implode('/', $parts) . '.php';
+
+     }
+
+
+
+
 
 }
-
-spl_autoload_register(array('\Base\App\App', '__autoload'));
+spl_autoload_register(array('Base\App\App', '__autoload'));
