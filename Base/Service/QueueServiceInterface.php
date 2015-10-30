@@ -6,6 +6,7 @@
  * Time: 17:59
  */
 namespace Base\Service;
+
 /**
  * interface for Queue
  *

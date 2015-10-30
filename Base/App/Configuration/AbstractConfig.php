@@ -1,12 +1,15 @@
 <?php
 namespace Base\App\Configuration;
 
-abstract class  AbstractConfig
+abstract class AbstractConfig
 {
-    public $storage = null;
+    protected $storage = [];
 
+    /**
+     * @param $config
+     */
     public function __construct($config)
     {
-        $this->storage  = $config;
+        $this->storage = $config;
     }
 }
