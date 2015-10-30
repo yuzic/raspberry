@@ -8,10 +8,10 @@
 
 class LoggerMessageTest extends PHPUnit_Framework_TestCase
 {
-    public function testLogMessage()
-    {
-        $logger  = new Base\Service\LoggerMessage();
-
-        $this->assertTrue($logger->logMessage());
-    }
+//    public function testLogMessage()
+//    {
+//        $logger  = new Base\Service\Logger\LoggerDbMessage();
+//
+//        $this->assertTrue($logger->add());
+//    }
 }

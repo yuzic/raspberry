@@ -15,6 +15,11 @@ class NotifierLoggerTest extends PHPUnit_Framework_TestCase
 
     public function testNotiferSender()
     {
+        $loggerDb = new Base\Service\Logger\LoggerDbMessage();
 
+        $notifierLogger = new Base\Service\NotifierLogger($loggerDb);
+
+        $message = new Base\Service\MessageService('+79218963260','test sms');
+        $notifierLogger->send($message);
     }
 }
